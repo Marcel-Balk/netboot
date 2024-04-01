@@ -1,6 +1,6 @@
 #!ipxe
 ####       {{ boot_domain }} initial loader        ####
-#### see https://netboot.xyz for more information ####
+#### see https://netboot.extremedatacenter.com for more information ####
 {% if bootloader_https_enabled | bool %}
 set conn_type https
 chain --autofree https://{{ boot_domain }}/menu.ipxe || echo HTTPS failed... attempting HTTP...
@@ -14,7 +14,7 @@ exit
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>{{ site_name }} BootLoaders - Powered by netboot.xyz</title>
+    <title>{{ site_name }} BootLoaders - Powered by eXtreme Datacenter</title>
     <meta name='description' content='Download links for available {{ site_name }} bootloaders.'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
@@ -33,7 +33,7 @@ exit
   {% endif %}
   <p>
   Version: {{ boot_version }}<br>
-  Powered by <a href=https://netboot.xyz>netboot.xyz</a>
+  Powered by <a href=https://extremehosting.nl>eXtreme Hosting</a>
   </p>
 
 {% if generate_disks_hybrid == true %}
