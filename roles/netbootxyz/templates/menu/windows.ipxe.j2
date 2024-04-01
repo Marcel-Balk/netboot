@@ -24,11 +24,11 @@ goto windows
 
 :url_set
 echo Set the HTTP URL of an extracted Windows ISO without the trailing slash:
-echo e.g. http://www.mydomain.com/windows
+echo e.g. https://local.ms/OS/win11
 echo
 echo -n URL: ${} && read win_base_url
 echo
-echo netboot.xyz will attempt to load the following files:
+echo eXtreme Datacenter will attempt to load the following files:
 echo ${win_base_url}/${win_arch}/bootmgr
 echo ${win_base_url}/${win_arch}/bootmgr.efi
 echo ${win_base_url}/${win_arch}/boot/bcd
