@@ -8,10 +8,10 @@ generate_local_vars: true
 make_num_jobs: 1
 
 # set desired site name
-# site_name: mysitename.com
+site_name: netboot.extremedatacenter.com
 
 # set desired boot domain
-# boot_domain: boot.mysitename.com
+boot_domain: netboot.extremedatacenter.com
 
 # set boot version
 # boot_version: "2.x"
@@ -46,4 +46,4 @@ early_menu_contents: |
    ### early menu overrides
    ### used to set early ipxe options such as custom console & logo
    # console --x 1024 --y 768
-   # console --picture https://boot.netboot.xyz/logo.png
+   # console --picture https://extremehosting.nl/promo/itdev-white.png
