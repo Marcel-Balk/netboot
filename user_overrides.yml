@@ -14,7 +14,7 @@ site_name: netboot.extremedatacenter.com
 boot_domain: netboot.extremedatacenter.com
 
 # set boot version
-# boot_version: "2.x"
+boot_version: "2.x"
 
 # bootloader_tftp_enabled: false
 # bootloader_https_enabled: true
