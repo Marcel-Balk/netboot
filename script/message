@@ -10,7 +10,7 @@ elif [ "${TYPE}" == "rc-push" ]; then
 elif [ "${TYPE}" == "live-push" ]; then
   BOOT_URL="https://boot.netboot.xyz/$(cat version.txt)/index.html"
 elif [ "${TYPE}" == "rolling-push" ]; then
-  BOOT_URL="https://boot.netboot.xyz/index.html"
+  BOOT_URL="https://netboot.extremedatacenter.com/index.html"
 fi
 
 # send status to discord
