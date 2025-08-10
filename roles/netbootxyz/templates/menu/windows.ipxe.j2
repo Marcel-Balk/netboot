@@ -8,6 +8,7 @@ goto ${menu} ||
 
 :windows
 set os Microsoft Windows
+set win_base_url https://os.local.ms/windows/
 clear win_version
 menu ${os} 
 item --gap Installers
@@ -24,7 +25,7 @@ goto windows
 
 :url_set
 echo Set the HTTP URL of an extracted Windows ISO without the trailing slash:
-echo e.g. https://local.ms/OS/win11
+echo e.g. https://OS.local.ms/OS/win11
 echo
 echo -n URL: ${} && read win_base_url
 echo
