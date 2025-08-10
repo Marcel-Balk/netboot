@@ -90,7 +90,7 @@ Please see the [self-hosting docs](https://netboot.xyz/docs/selfhosting/) for mo
 To generate, run:
 
 ```
-ansible-playbook -i inventory site.yml
+ansible-playbook site.yml
 ```
 
 The build output will be located in /var/www/html by default.
@@ -98,8 +98,8 @@ The build output will be located in /var/www/html by default.
 #### Deploying with Docker
 
 ```
-docker build -t localbuild -f Dockerfile .
-docker run --rm -it -v $(pwd):/buildout localbuild
+docker build -t localbuild --platform=linux/amd64 -f Dockerfile .
+docker run --rm -it --platform=linux/amd64 -v $(pwd):/buildout localbuild
 ```
 
 The build output will be in the generated folder `buildout`
@@ -127,15 +127,15 @@ In addition to being able to host netboot.xyz locally, you can also create your 
 | BlackArch Linux | https://blackarch.org | Yes | Yes |
 | Bluestar Linux | https://sourceforge.net/projects/bluestarlinux | No | Yes |
 | Bodhi Linux | https://www.bodhilinux.com | No | Yes |
+| CachyOS | https://cachyos.org | No | Yes |
 | CentOS | https://centos.org | Yes | No |
-| CoreOS | http://coreos.com/ | Yes | No |
 | Debian | https://debian.org | Yes | Yes|
-| Deepin | https://www.deepin.org | No | Yes |
 | Devuan | https://devuan.org | Yes | No |
 | Elementary OS | https://elementary.io | No | Yes |
 | EndeavourOS | https://endeavouros.com | No | Yes |
 | Fatdog64 | https://distro.ibiblio.org/fatdog/web/ | No | Yes |
 | Fedora | https://fedoraproject.org | Yes | Yes |
+| Fedora CoreOS | https://getfedora.org/en/coreos?stream=stable | Yes | No |
 | Feren OS | https://ferenos.weebly.com/ | Yes | No |
 | Flatcar Container Linux | https://www.flatcar.org | Yes | No |
 | FreeBSD | https://freebsd.org | Yes, disk image | No |
@@ -146,6 +146,7 @@ In addition to being able to host netboot.xyz locally, you can also create your 
 | hrmpf | https://github.com/leahneukirchen/hrmpf/ | No | Yes |
 | IPFire | https://www.ipfire.org | Yes | No |
 | K3OS | https://k3os.io/ | Yes | Yes |
+| Kairos | https://kairos.io/ | Yes | No |
 | Kali Linux | https://www.kali.org | Yes | Yes |
 | KDE Neon | https://neon.kde.org | No | Yes |
 | Kodachi | https://www.digi77.com/linux-kodachi/ | No | Yes |
@@ -171,7 +172,6 @@ In addition to being able to host netboot.xyz locally, you can also create your 
 | Red Hat Enterprise Linux | https://www.redhat.com | User supplied media | No |
 | Regolith | https://regolith-linux.org | No | Yes |
 | Rocky Linux | https://rockylinux.org/ | Yes | No |
-| Scientific Linux | https://scientificlinux.org | Yes | No |
 | Septor | https://septor.sourceforge.io | No | Yes |
 | Slackware | https://www.slackware.com | Yes | No |
 | SmartOS | https://www.smartos.org/ | Yes | No |
@@ -182,6 +182,7 @@ In addition to being able to host netboot.xyz locally, you can also create your 
 | Ubuntu | https://www.ubuntu.com | Yes | Yes |
 | VMware | https://www.vmware.com | User supplied media | No |
 | VMware Photon | https://vmware.github.io/photon/ | Yes | No |
+| Vanilla OS | https://vanillaos.org | No | Yes |
 | Voyager | https://voyagerlive.org | No | Yes |
 | VyOS | https://vyos.io | Yes | No |
 | Zen Installer | https://sourceforge.net/projects/revenge-installer | Yes | No |
@@ -209,6 +210,7 @@ In addition to being able to host netboot.xyz locally, you can also create your 
 | Super Grub2 Disk | https://www.supergrubdisk.org | ISO - Memdisk |
 | System Rescue | https://system-rescue.org/ | LiveCD |
 | Ultimate Boot CD | https://www.ultimatebootcd.com | ISO - Memdisk |
+| ZFSBootMenu | https://docs.zfsbootmenu.org/ | Kernel |
 
 ### Stargazers over time
 

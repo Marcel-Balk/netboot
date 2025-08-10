@@ -37,10 +37,6 @@ boot_version: "2.x"
 #  supergrub:
 #    enabled: false
 
-# set licensed media locations in boot.cfg
-# win_base_url:
-# rhel_base_url:
-
 early_menu_enabled: false
 early_menu_contents: |
    ### early menu overrides

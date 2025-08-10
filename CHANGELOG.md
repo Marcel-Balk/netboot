@@ -3,9 +3,126 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased]
+## [2.0.89] - Unreleased
 
-## [2.0.79] - 2024-00-00
+## [2.0.88] - 2025-08-09
+
+### Added
+
+- CachyOS live distribution with archiso boot configuration
+- Ubuntu Spins distribution template for Ubuntu flavor variants  
+- Debian 13 (Trixie) net installer
+- Rocky Linux 10 and AlmaLinux 10 
+- Flatcar Container Linux ARM64 architecture support
+- Proxmox VE 9.0
+- Dasharo Tools Suite updated to v2.6.0
+- SystemRescue archiso_pxe_http initrd support
+
+### Changed
+
+- FreeDOS updated to v1.4 with corrected URLs
+- Various distribution version updates and endpoint refreshes
+- Improved MAC address handling in TFTP boot configuration
+
+### Fixed
+
+- Loading of TFTP menu files (fixed HOSTNAME typo): local-vars.ipxe, HOSTNAME-${hostname}.ipxe,
+  MAC-${mac:hexraw}.ipxe, MAC-${mac:hexhyp}.ipxe and custom menu.ipxe from the
+  root of the tftp server. The root `tftp-root-path` is a variable and can be
+  set in `local-vars.ipxe` to override. The default is `/`
+- Fedora CoreOS kernel filename format corrected
+
+### Removed
+
+- Deepin distribution completely removed from the system
+
+## [2.0.87] - 2025-05-08
+
+### Added
+
+- Fedora Onyx build
+- Kali arm64 Added
+
+### Changed
+
+- Various version updates
+- Cleanup of older distros from endpoints
+
+## [2.0.86] - 2025-03-13
+
+### Added
+
+- Support for Kairos
+- Enabled NFS support in iPXE
+
+## [2.0.85] - 2025-02-23
+
+### Changed
+
+- Various version updates
+- Checks for boot timeout from local-vars.ipxe
+
+## [2.0.84] - 2025-01-04
+
+### Added
+
+- UEFI Shell available under utilities for x86/ARM UEFI mode
+- Floppy boot images for UEFI
+- Dasharo Tools Suite
+- Latest GRML added with ARM support
+
+### Changed
+
+- Moves win_base_url and rhel_base_url out of boot.cfg to local-vars.ipxe as they are
+  user defined variables.
+- Adds a check in boot.cfg to see if live_endpoint is set from local-vars.ipxe. This
+  will allow the user to set their overrides locally on their network.
+
+## [2.0.83] - 2024-11-07
+
+### Changed
+
+- Various version updates
+
+## [2.0.82] - 2024-09-18
+
+### Changed
+
+- Various version updates
+
+## [2.0.81] - 2024-08-10
+
+### Added
+
+- Added ZFSBootMenu
+- Added VanillaOS
+- Added Super Grub2 Disk for EFI
+
+### Fixed
+
+- Slowness with Ubuntu 24.04 net install getting stuck on Cloud Init
+- Removed hard coded console on VyOS to fix on Equinix Metal
+
+## [2.0.80] - 2024-07-17
+
+### Added
+
+- Adds option for setting System Resuce password 
+
+### Removed
+
+- Scientific Linux (EOL)
+
+## [2.0.79] - 2024-05-25
+
+### Added
+
+- Added Talos to arm64 menu
+- Ubuntu 24.04 LTS, Fedora 40, and many other version updates
+
+### Changed 
+
+- Dropped newer Ubuntu Live Image versions as they don't properly work anymore
 
 ## [2.0.78] - 2024-03-30
 

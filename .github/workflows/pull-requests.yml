@@ -16,16 +16,17 @@ jobs:
 
     - uses: actions/setup-python@v5
       with:
-        python-version: '3.10'
+        python-version: '3.13' # renovate: datasource=github-tags depName=python
 
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
-        pip install ansible==9.0.1 ansible-lint==6.22.1
+        python -m pip install --upgrade pip  
+        pip install ansible==10.2.0 # renovate: datasource=pypi
+        pip install ansible-lint==24.7.0 # renovate: datasource=pypi
 
     - name: Syntax Check
       run: |
-        ansible-playbook -i inventory site.yml --syntax-check
+        ansible-playbook site.yml --syntax-check
 
     - name: Ansible lint
       run: |
